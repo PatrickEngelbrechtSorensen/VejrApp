@@ -3,5 +3,7 @@ h1 { color: #2a5d84; }
 table { border-collapse: collapse; width: 100%; max-width: 900px; }
 th, td { border: 1px solid #ccc; padding: 12px; text-align: center; }
 th { background: #f0f0f0; }
-tr:hover td { background: #e0f7fa; }
+.highlight-col {
+    background: #e0f7fa !important;
+}
 #details { margin-top: 30px; padding: 15px; border: 1px solid #ccc; width: 400px; background: #f9f9f9; }

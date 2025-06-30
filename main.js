@@ -46,10 +46,26 @@ fetch('/forecast')
         descRow.innerHTML = forecastData.map((day, idx) =>
             `<td style="cursor:pointer;" onclick="showDetails(${idx})">${day.description}</td>`
         ).join('');
+
+        document.querySelectorAll('#forecast-table td').forEach(cell => {
+          cell.addEventListener('mouseenter', function() {
+            const col = cell.cellIndex;
+            document.querySelectorAll(`#forecast-table tr`).forEach(row => {
+              if (row.cells[col]) row.cells[col].classList.add('highlight-col');
+            });
+          });
+          cell.addEventListener('mouseleave', function() {
+            const col = cell.cellIndex;
+            document.querySelectorAll(`#forecast-table tr`).forEach(row => {
+              if (row.cells[col]) row.cells[col].classList.remove('highlight-col');
+            });
+          });
+        });
     })
     .catch(() => {
         document.body.innerHTML += "<p style='color:red;'>Failed to load forecast data.</p>";
     });
+
 
 window.showDetails = function(idx) {
     const day = forecastData[idx];
