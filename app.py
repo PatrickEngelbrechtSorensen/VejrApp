@@ -1,26 +1,23 @@
-from flask import Flask, jsonify, send_from_directory, json
+import streamlit as st
+import json
+import random
 
-app = Flask(__name__)
+st.title("7-Day Weather Forecast - Rosenkrantzgade 19B, 8000 Aarhus C")
 
-def load_forecast():
-    with open('forecast_data.json', encoding='utf-8') as f:
-        return json.load(f)
+# Load dummy data from forecast_data.json
+with open("forecast_data.json", "r", encoding="utf-8") as f:
+    forecast = json.load(f)
 
-@app.route('/forecast')
-def forecast():
-    return jsonify(load_forecast())
+cols = st.columns(len(forecast))
 
-@app.route('/')
-def home():
-    return send_from_directory('.', 'index.html')
-
-@app.route('/main.js')
-def main_js():
-    return send_from_directory('.', 'main.js')
-
-@app.route('/style.css')
-def style_css():
-    return send_from_directory('.', 'style.css')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+for idx, day in enumerate(forecast):
+    with cols[idx]:
+        st.markdown(f"### {day['date']}")
+        st.markdown(f"{day.get('icon', '')} **{day['description']}**")
+        st.markdown(f"**Temperature:** {day['temperature']}°C")
+        st.markdown(f"**Rain:** {day['rain_mm']} mm")
+        st.markdown(f"**Wind:** {day['wind_ms']} m/s")
+        st.markdown("**Clothing tips:** " + ", ".join(day.get("clothing", [])))
+        # Show only one suggestion if available
+        suggestion = random.choice(day["suggestions"]) if day.get("suggestions") else "No suggestion"
+        st.markdown(f"**Suggestion:** {suggestion}")
