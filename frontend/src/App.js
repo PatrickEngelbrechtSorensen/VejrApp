@@ -10,6 +10,8 @@ function App() {
   const [current, setCurrent] = useState(null);
   const [error, setError] = useState("");
   const [suggestionsData, setSuggestionsData] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
 
   useEffect(() => {
     // Fetch current weather
@@ -72,9 +74,21 @@ function App() {
       <header className="App-header">
         <h1>Weather in Aarhus</h1>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <Weather current={current} />
+        <div style={{ display: "flex", alignItems: "flex-start", gap: "2rem" }}>
+          <div>
+            <Weather
+              current={current}
+              onShowSuggestions={() => setShowSuggestions((v) => !v)}
+              showSuggestions={showSuggestions}
+            />
+          </div>
+          {showSuggestions && (
+            <div>
+              <WeatherSuggestions suggestionEntry={suggestionEntry} />
+            </div>
+          )}
+        </div>
         <Forecast forecast={forecast} />
-        <WeatherSuggestions suggestionEntry={suggestionEntry} />
       </header>
     </div>
   );

@@ -9,14 +9,14 @@ function WeatherSuggestions({ suggestionEntry }) {
   ];
   return (
     <div style={{ marginTop: 24 }}>
-      <h3>After Work Suggestion</h3>
-      <p>{suggestion}</p>
       <h4>Clothing Tips</h4>
       <ul>
         {suggestionEntry.clothing.map((item, idx) => (
           <li key={idx}>{item}</li>
         ))}
       </ul>
+      <h4>After Work Suggestion</h4>
+      <p>{suggestion}</p>
     </div>
   );
 }

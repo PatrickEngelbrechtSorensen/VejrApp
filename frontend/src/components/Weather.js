@@ -1,6 +1,6 @@
 import React from "react";
 
-function Weather({ current }) {
+function Weather({ current, onShowSuggestions, showSuggestions }) {
   if (!current) return null;
   return (
     <div style={{ background: "#1e293b", padding: 24, borderRadius: 12, marginBottom: 32, display: "inline-block" }}>
@@ -16,6 +16,12 @@ function Weather({ current }) {
       <div>Humidity: {current.main.humidity}%</div>
       <div>Wind: {current.wind.speed} m/s</div>
       <div>Feels like: {current.main.feels_like}°C</div>
+      <button
+        style={{ marginTop: 24 }}
+        onClick={onShowSuggestions}
+      >
+        {showSuggestions ? "Hide" : "Show"} Suggestions
+      </button>
     </div>
   );
 }

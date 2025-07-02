@@ -1,8 +1,43 @@
 [
   {
     "description": "Clouds",
-    "temperature": 27,
-    "wind_ms": 1,
+    "temperature": 15,
+    "wind_ms": 3,
+    "clothing": [
+      "Long-sleeve shirt",
+      "Light jacket or hoodie",
+      "Jeans or trousers",
+      "Sneakers"
+    ],
+    "suggestions": [
+      "Walk along the Aarhus Ø promenade",
+      "Visit ARoS Art Museum and see the rainbow panorama",
+      "Meet up for coffee and coding at Street Coffee",
+      "Play a casual football match at a local field",
+      "Go fishing at Aarhus Harbor"
+    ]
+  },
+  {
+    "description": "Clouds",
+    "temperature": 25,
+    "wind_ms": 2,
+    "clothing": [
+      "T-shirt",
+      "Jeans or shorts",
+      "Light sneakers",
+      "Sunglasses"
+    ],
+    "suggestions": [
+      "Go for a jog around Brabrand Lake",
+      "Cycle to Marselisborg Forest for a nature walk",
+      "Have a picnic in Universitetsparken",
+      "Take photos of the city from Salling Rooftop"
+    ]
+  },
+  {
+    "description": "Clear",
+    "temperature": 25,
+    "wind_ms": 2,
     "clothing": [
       "T-shirt",
       "Shorts",
@@ -19,26 +54,7 @@
     ]
   },
   {
-    "description": "Sunny",
-    "temperature": 20,
-    "wind_ms": 4,
-    "clothing": [
-      "T-shirt",
-      "Shorts or jeans",
-      "Light sneakers",
-      "Sunglasses",
-      "Cap or sunhat"
-    ],
-    "suggestions": [
-      "Play a game of football at Mindeparken with friends",
-      "Cycle along the Aarhus River to the harbor",
-      "Swim and hang out at Den Permanente beach",
-      "Grab iced coffee at La Cabra café",
-      "Take a walk in Riis Skov and listen to a podcast"
-    ]
-  },
-  {
-    "description": "Partly cloudy",
+    "description": "Clear",
     "temperature": 18,
     "wind_ms": 3,
     "clothing": [
@@ -48,35 +64,16 @@
       "Comfortable shoes"
     ],
     "suggestions": [
-      "Go for a jog around Brabrand Lake",
-      "Visit Dokk1 and chill with a book or code on your laptop",
-      "Meet friends for board games at a local café",
-      "Take photos of the city from Salling Rooftop",
-      "Cycle to Marselisborg Forest for a nature walk"
-    ]
-  },
-  {
-    "description": "Cloudy",
-    "temperature": 16,
-    "wind_ms": 5,
-    "clothing": [
-      "Long-sleeve shirt",
-      "Light jacket or hoodie",
-      "Jeans or trousers",
-      "Sneakers"
-    ],
-    "suggestions": [
-      "Walk along the Aarhus Ø promenade",
-      "Visit ARoS Art Museum and see the rainbow panorama",
-      "Meet up for coffee and coding at Street Coffee",
-      "Play a casual football match at a local field",
-      "Go fishing at Aarhus Harbor"
+      "Take a walk in the Botanical Garden",
+      "Go for a bike ride along the coast",
+      "Read a book outside",
+      "Meet friends for ice cream at the harbor"
     ]
   },
   {
     "description": "Rain",
     "temperature": 14,
-    "wind_ms": 6,
+    "wind_ms": 5,
     "clothing": [
       "Waterproof jacket",
       "Jeans or long pants",
@@ -92,9 +89,9 @@
     ]
   },
   {
-    "description": "Rain showers",
+    "description": "Rain",
     "temperature": 17,
-    "wind_ms": 4,
+    "wind_ms": 3,
     "clothing": [
       "Rain jacket",
       "Long pants",
@@ -107,75 +104,6 @@
       "Go to an indoor swimming pool",
       "Try a new recipe at home",
       "Have a board game night"
-    ]
-  },
-  {
-    "description": "Thunderstorms",
-    "temperature": 15,
-    "wind_ms": 8,
-    "clothing": [
-      "Rain jacket",
-      "Waterproof shoes or boots",
-      "Long pants",
-      "Sweater",
-      "Umbrella"
-    ],
-    "suggestions": [
-      "Grind some quests in Old School Runescape",
-      "Host a movie or series marathon with friends",
-      "Try a new indie game on Steam",
-      "Visit a board game café like Bastard Café",
-      "Work on a side project or contribute to open source"
-    ]
-  },
-  {
-    "description": "Clear",
-    "temperature": 21,
-    "wind_ms": 2,
-    "clothing": [
-      "T-shirt",
-      "Shorts or jeans",
-      "Sneakers",
-      "Sunglasses"
-    ],
-    "suggestions": [
-      "Take a walk in the Botanical Garden",
-      "Go for a bike ride along the coast",
-      "Have a picnic in the park",
-      "Read a book outside",
-      "Meet friends for ice cream at the harbor"
-    ]
-  },
-  {
-    "description": "Drizzle",
-    "temperature": 13,
-    "wind_ms": 3,
-    "clothing": [
-      "Light rain jacket",
-      "Long pants",
-      "Water-resistant shoes"
-    ],
-    "suggestions": [
-      "Visit Dokk1 and work on a project",
-      "Go to a café for board games",
-      "Try a new recipe at home",
-      "Watch a movie at home"
-    ]
-  },
-  {
-    "description": "Windy",
-    "temperature": 17,
-    "wind_ms": 8,
-    "clothing": [
-      "Windbreaker",
-      "Long pants",
-      "Sneakers or boots"
-    ],
-    "suggestions": [
-      "Fly a kite at the beach",
-      "Go windsurfing if you’re adventurous",
-      "Visit an indoor climbing gym",
-      "Meet friends for coffee indoors"
     ]
   },
   {
