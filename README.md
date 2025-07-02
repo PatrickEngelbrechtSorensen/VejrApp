@@ -33,10 +33,13 @@ This app requires an OpenWeatherMap API key.
 
 ## How it Works
 
-- The frontend fetches weather data from the backend and suggestions from a local JSON file on app start and every 15 minutes.
-- The fetched weather data is saved in cache to limit number of fetches.
-- The user can click a button to see suggestions for what to wear and do after work, based on the current weather.
-- The 5-day forecast is displayed at the bottom.
+- On app start:
+   - The frontend requests current weather and 5-day forecast data from the backend.
+   - The backend fetches this data from the OpenWeatherMap API (if not already cached) and returns it to the frontend.
+   - The backend caches weather data for 15 minutes to reduce the number of API requests.
+   - The frontend also loads activity and clothing suggestions from a local JSON file.
+- The user sees the current weather and a 5-day forecast.
+- The user can click a button below the current weather to view suggestions for what to wear and what to do after work, based on the current weather conditions.
 
 ## Testing
 
