@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.suggestion-btn {
+  margin-top: 24px;
+  padding: 12px 28px;
+  font-size: 0.7em;
+  font-weight: bold;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.suggestion-btn:hover {
+  background: #0369a1;
+}

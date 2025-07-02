@@ -17,7 +17,7 @@ function Weather({ current, onShowSuggestions, showSuggestions }) {
       <div>Wind: {current.wind.speed} m/s</div>
       <div>Feels like: {current.main.feels_like}°C</div>
       <button
-        style={{ marginTop: 24 }}
+        className="suggestion-btn"
         onClick={onShowSuggestions}
       >
         {showSuggestions ? "Hide" : "Show"} Suggestions
