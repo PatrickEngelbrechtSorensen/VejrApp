@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Displays current weather and button to show/hide suggestions.
+ * @param {object} props
+ * @param {object} props.suggestionEntry - The matched suggestion entry for the weather.
+ */
+
 function Weather({ current, onShowSuggestions, showSuggestions }) {
   if (!current) return null;
   return (

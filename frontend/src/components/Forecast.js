@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Displays a 5-day weather forecast as cards.
+ * @param {object} props
+ * @param {array} props.forecast - Array of forecast data for each day.
+ */
+
 function Forecast({ forecast }) {
   return (
     <div>

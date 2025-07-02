@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# VejrApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+VejrApp is a weather and activity suggestion app for Rosenkrantzgade 19B, 8000 Aarhus C. It shows the current weather, a 5-day forecast, and gives clothing and after-work suggestions based on the weather.
 
-## Available Scripts
+## How to Run
 
-In the project directory, you can run:
+### Setup API Key
 
-### `npm start`
+This app requires an OpenWeatherMap API key.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Go to [https://home.openweathermap.org/users/sign_up](https://home.openweathermap.org/users/sign_up) and create a free account.
+2. After signing up, go to the "API keys" section in your OpenWeatherMap dashboard.
+3. Copy your API key.
+4. In the `backend` folder, create a file named `.env` and add this line:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
+   OPENWEATHER_API_KEY=your_openweathermap_api_key_here
+   ```
 
-### `npm test`
+5. Save the file. Now you can run the backend as described above.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+1. `cd backend`
+2. `npm install`
+3. `node index.js`
 
-### `npm run build`
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm start`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How it Works
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The frontend fetches weather data from the backend and suggestions from a local JSON file on app start and every 15 minutes.
+- The fetched weather data is saved in cache to limit number of fetches.
+- The user can click a button to see suggestions for what to wear and do after work, based on the current weather.
+- The 5-day forecast is displayed at the bottom.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Testing
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The app should show the current weather, a button for suggestions, and the 5-day weather forecast.
+- Click the "Show Suggestions" button to see suggestions for what clothing to wear and what to do after work.
