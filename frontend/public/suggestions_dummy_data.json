@@ -72,8 +72,8 @@
   },
   {
     "description": "Rain",
-    "temperature": 14,
-    "wind_ms": 5,
+    "temperature": 25,
+    "wind_ms": 3,
     "clothing": [
       "Waterproof jacket",
       "Jeans or long pants",
