@@ -45,3 +45,17 @@ This app requires an OpenWeatherMap API key.
 
 - The app should show the current weather, a button for suggestions, and the 5-day weather forecast.
 - Click the "Show Suggestions" button to see suggestions for what clothing to wear and what to do after work.
+
+## Design Decisions
+
+- **Separation of Concerns:**  
+  The backend (Node.js/Express) handles all communication with the OpenWeatherMap API and manages API keys. The frontend (React) is responsible for user interaction and display logic.
+
+- **Caching:**  
+  Weather and forecast data are cached on the backend for 15 minutes to reduce API calls, improve performance, and stay within OpenWeatherMap’s free tier limits.
+
+- **Component-Based Frontend:**  
+  The React frontend is organized into modular components (`Weather`, `Forecast`, `WeatherSuggestions`) for maintainability, reusability, and clarity.
+
+- **Local Suggestions Data:**  
+  Clothing and activity suggestions are stored in a local JSON file, making it easy to update or expand without changing application logic. This could later be handled by AI with integration.

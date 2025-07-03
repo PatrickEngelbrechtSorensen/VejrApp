@@ -56,7 +56,7 @@
   {
     "description": "Clear",
     "temperature": 18,
-    "wind_ms": 3,
+    "wind_ms": 9,
     "clothing": [
       "T-shirt or light long-sleeve",
       "Jeans or shorts",
@@ -72,8 +72,8 @@
   },
   {
     "description": "Rain",
-    "temperature": 25,
-    "wind_ms": 3,
+    "temperature": 20,
+    "wind_ms": 6,
     "clothing": [
       "Waterproof jacket",
       "Jeans or long pants",
