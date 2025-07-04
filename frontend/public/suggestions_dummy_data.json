@@ -1,8 +1,8 @@
 [
   {
     "description": "Clouds",
-    "temperature": 15,
-    "wind_ms": 3,
+    "temperature": 19,
+    "wind_ms": 6,
     "clothing": [
       "Long-sleeve shirt",
       "Light jacket or hoodie",
@@ -72,7 +72,7 @@
   },
   {
     "description": "Rain",
-    "temperature": 20,
+    "temperature": 19,
     "wind_ms": 6,
     "clothing": [
       "Waterproof jacket",
